@@ -28,13 +28,13 @@ class App extends React.Component {
    * Then renders all associated zip-codes
    */
 	lookItUp(city) {
-		if(city.toUpperCase() === "GULLIBLE") {
+		/*if(city.toUpperCase() === "GULLIBLE") {
 			this.setState({
 				city: "This is definitely not hardcoded.",
 				entries: ["00042"]
 			});
 			return;
-		}
+		}*/
 		request("http://ctp-zip-api.herokuapp.com/city/" + city.toUpperCase(), 
 			{ json: true }, 
 			(err, res, body) => {
